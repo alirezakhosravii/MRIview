@@ -2,7 +2,7 @@ import nibabel as nib
 import matplotlib.pyplot as plt
 
 # Load the NII file
-nii_file_path = '/Users/alirezakhosravi/Downloads/swc1nIXI625-Guys-1098-MPRAGESEN_-sIXI624_-0301-00003-000001-01_RAS_denoised.nii'  # Replace with the actual file path
+nii_file_path = 'path/file.nii'  # Replace with the actual file path
 img = nib.load(nii_file_path)
 
 # Get the image data as a NumPy array
