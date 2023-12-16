@@ -1,0 +1,23 @@
+import nibabel as nib
+import matplotlib.pyplot as plt
+
+# Load the NIfTI file
+nii_file = nib.load('/Users/alirezakhosravi/dist/pySynthMRI/src/qmap_T1_bet.nii')
+
+# Get the 3D data array
+data = nii_file.get_fdata()
+
+# Create a 3D rendering of the MRI data
+fig = plt.figure(figsize=(8, 8))
+ax = fig.add_subplot(111, projection='3d')
+
+# You can customize the rendering options, e.g., colormap, opacity, etc.
+ax.voxels(data, cmap='gray', alpha=0.5)
+
+# Set axis labels (optional)
+ax.set_xlabel('X-axis')
+ax.set_ylabel('Y-axis')
+ax.set_zlabel('Z-axis')
+
+# Show the 3D representation
+plt.show()
