@@ -1,0 +1,25 @@
+import nibabel as nib
+import matplotlib.pyplot as plt
+
+# Load the NII file
+nii_file_path = '/Users/alirezakhosravi/Downloads/swc1nIXI625-Guys-1098-MPRAGESEN_-sIXI624_-0301-00003-000001-01_RAS_denoised.nii'  # Replace with the actual file path
+img = nib.load(nii_file_path)
+
+# Get the image data as a NumPy array
+image_data = img.get_fdata()
+
+# Display slices of the MRA image
+num_slices = image_data.shape[-1]
+
+# You can customize the range of slices to display
+start_slice = 0
+end_slice = num_slices
+
+# Loop through the slices and display them
+for i in range(start_slice, end_slice):
+    plt.figure()
+    plt.imshow(image_data[:, :, i], cmap='gray')
+    plt.title(f'Slice {i}')
+    plt.axis('off')
+
+plt.show()
