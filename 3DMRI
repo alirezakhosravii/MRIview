@@ -2,7 +2,7 @@ import nibabel as nib
 import matplotlib.pyplot as plt
 
 # Load the NIfTI file
-nii_file = nib.load('/Users/alirezakhosravi/dist/pySynthMRI/src/qmap_T1_bet.nii')
+nii_file = nib.load('Path/file.nii')
 
 # Get the 3D data array
 data = nii_file.get_fdata()
