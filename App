@@ -58,6 +58,6 @@ class NIFTIViewer(tk.Tk):
         self.image_label.configure(image=imgtk)
 
 # Usage example
-filepath = "path/file.nii"
+filepath = "/Users/Downloads/1.nii"
 app = NIFTIViewer(filepath, 'axial')
 app.mainloop()
